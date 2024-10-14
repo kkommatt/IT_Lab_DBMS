@@ -1,0 +1,51 @@
+{
+  "Tables": [
+    {
+      "Name": "Users",
+      "Fields": [
+        {
+          "Name": "name",
+          "Type": 3
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "name": "Matt"
+          }
+        },
+        {
+          "Values": {
+            "name": "matthw"
+          }
+        },
+        {
+          "Values": {
+            "name": "Only one"
+          }
+        },
+        {
+          "Values": {
+            "name": "One"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NewTable",
+      "Fields": [
+        {
+          "Name": "dt_interval_col",
+          "Type": 5
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "dt_interval_col": "2024-10-17 - 2024-11-20"
+          }
+        }
+      ]
+    }
+  ]
+}

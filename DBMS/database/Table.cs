@@ -71,23 +71,17 @@ public class Table
                         return value is string s && s.Length == 1;
                     case DataType.String:
                         return value is string;
-                    case DataType.Time:
-                        DateTime.ParseExact(value.ToString(), "HH:mm", null, System.Globalization.DateTimeStyles.None);
+                    case DataType.Date:
+                        DateTime.ParseExact(value.ToString(), "yyyy-MM-dd", null);
                         return true;
-                    case DataType.TimeInterval:
-                        // Split on " - " to separate start and end dates
+                    case DataType.DateInterval:
                         var dates = value.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
                         if (dates.Length != 2)
                             return false;
-
-                        // Parse start date
-                        if (!DateTime.TryParseExact(dates[0].Trim(), "HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime startDate))
+                        if (!DateTime.TryParseExact(dates[0].Trim(), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime startDate))
                             return false;
-                        // Parse end date
-                        if (!DateTime.TryParseExact(dates[1].Trim(), "HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime endDate))
+                        if (!DateTime.TryParseExact(dates[1].Trim(), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime endDate))
                             return false;
-
-                        // Ensure start date is earlier than or equal to end date
                         return startDate <= endDate;
                     default:
                         return false;

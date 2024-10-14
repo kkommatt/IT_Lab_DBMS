@@ -18,3 +18,16 @@ C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\refint\DBMS.d
 C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\DBMS.pdb
 C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\DBMS.genruntimeconfig.cache
 C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\ref\DBMS.dll
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\CreateTableWindow.g.cs
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\RowWindow.g.cs
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\TableViewWindow.g.cs
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\CreateTableWindow.baml
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\RowWindow.baml
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\TableViewWindow.baml
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\DBMS.csproj.AssemblyReference.cache
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\OpenWindow.g.cs
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\OpenWindow.baml
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\DBMS.csproj.CopyComplete
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\RenameFieldWindow.g.cs
+C:\Users\mkovalyk\RiderProjects\DBMS\DBMS\obj\Debug\net7.0-windows\RenameFieldWindow.baml

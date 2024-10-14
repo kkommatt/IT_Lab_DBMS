@@ -1,0 +1,48 @@
+﻿<Window x:Class="DBMS.CreateTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DBMS"
+        mc:Ignorable="d"
+        Title="Create Table" Height="400" Width="520">
+    <Grid Margin="10">
+        <Label Content="Table Name:" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBox x:Name="TxtTableName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"
+                 Margin="150,0,0,0" />
+
+        <Label Content="Field Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0" />
+        <TextBox x:Name="TxtFieldName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"
+                 Margin="150,30,0,0" />
+
+        <Label Content="Data Type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,60,0,0" />
+        <ComboBox x:Name="CmbDataType" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"
+                  Margin="150,60,0,0" />
+
+        <Label x:Name="LblDataTypeHint" Content="Select data type for next field" HorizontalAlignment="Left"
+               VerticalAlignment="Top" Margin="150,90,0,0" />
+
+        <Button x:Name="BtnAddField" Content="Add field" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="90" Margin="380,30,0,0" Click="btnAddField_Click" />
+
+        <Button x:Name="BtnRemoveField" Content="Delete Field" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="90" Margin="380,60,0,0" Click="btnRemoveField_Click" />
+
+        <Button x:Name="BtnEditField" Content="Edit Field" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="90" Margin="380,90,0,0" Click="btnEditField_Click" />
+
+        <ListBox x:Name="ListBoxFields" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="100"
+                 Margin="150,120,0,0" />
+
+        <Label Content="Fields List" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,120,0,0" />
+
+        <Label x:Name="LblFieldNameHint" Content="Enter name and press add field" HorizontalAlignment="Left"
+               VerticalAlignment="Top" Margin="150,220,0,0" />
+
+        <Label x:Name="LblFieldsCount" Content="Total count of fields: 0" HorizontalAlignment="Left"
+               VerticalAlignment="Top" Margin="150,250,0,0" />
+
+        <Button x:Name="BtnCreateTable" Content="Create Table" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="200" Height="30" Margin="150,280,0,0" Click="btnCreateTable_Click" />
+    </Grid>
+</Window>

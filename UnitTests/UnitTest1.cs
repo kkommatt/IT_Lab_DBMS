@@ -50,28 +50,28 @@ public class DatabaseTests
     public void TestTimeTypeField()
     {
         var table = new Table("TimeTable");
-        table.AddField(new Field("EventTime", DataType.Time)); 
+        table.AddField(new Field("EventTime", DataType.Date)); 
 
         var row = new Row();
-        row.Values["EventTime"] = "00:00"; 
+        row.Values["EventTime"] = "2024-10-10"; 
         table.AddRow(row);
 
         Assert.AreEqual(1, table.Rows.Count);
-        Assert.AreEqual("00:00", row.Values["EventTime"].ToString());
+        Assert.AreEqual("2024-10-10", row.Values["EventTime"].ToString());
     }
 
     [Test]
     public void TestTimeIntervalTypeField()
     {
         var table = new Table("IntervalTable");
-        table.AddField(new Field("TimeRange", DataType.TimeInterval)); // Change DataType.DateInterval to DataType.TimeInterval
+        table.AddField(new Field("TimeRange", DataType.DateInterval)); 
 
         var row = new Row();
-        row.Values["TimeRange"] = "00:00 - 23:59"; 
+        row.Values["TimeRange"] = "2024-10-10 - 2024-11-11"; 
         table.AddRow(row);
 
         Assert.AreEqual(1, table.Rows.Count);
-        Assert.AreEqual("00:00 - 23:59", row.Values["TimeRange"].ToString());
+        Assert.AreEqual("2024-10-10 - 2024-11-11", row.Values["TimeRange"].ToString());
     }
     
     [Test]

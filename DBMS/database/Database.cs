@@ -51,14 +51,12 @@ public class Database
         var json = File.ReadAllText(filePath);
         return JsonSerializer.Deserialize<Database>(json);
     }
-    // todo: replace with Rename column in table method
+   
     
-
-
     private bool CanConvertType(DataType type1, DataType type2)
     {
-        if ((type1 == DataType.String && type2 == DataType.Time) ||
-            (type1 == DataType.Time && type2 == DataType.String))
+        if ((type1 == DataType.String && type2 == DataType.Date) ||
+            (type1 == DataType.Date && type2 == DataType.String))
             return true;
 
         return false; 
@@ -81,14 +79,14 @@ public class Database
                 continue; 
             }
 
-            if (field.Type == DataType.Time)
+            if (field.Type == DataType.Date)
             {
                 if (!(value1 is DateTime dt1) || !(value2 is DateTime dt2))
                     return false;
                 if (dt1.Date != dt2.Date)
                     return false;
             }
-            else if (field.Type == DataType.TimeInterval)
+            else if (field.Type == DataType.DateInterval)
             {
                 var intervalParts1 = value1.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
                 var intervalParts2 = value2.ToString().Split(new string[] { " - " }, StringSplitOptions.None);

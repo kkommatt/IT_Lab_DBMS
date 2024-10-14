@@ -1,0 +1,34 @@
+﻿<Window x:Class="DBMS.OpenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DBMS"
+        Title="Database MS" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <Grid Margin="0,0,0,10">
+                <TextBlock Text="Path to DB:" Margin="0,0,0,10" />
+                <TextBox x:Name="TxtFilePath" Width="300" IsReadOnly="True" Margin="60,0,0,10" />
+            </Grid>
+            <Button x:Name="BtnBrowse" Content="Browse..." Click="btnBrowse_Click" Margin="0,0,0,10" />
+            <Button x:Name="BtnOpen" Content="Open" Click="btnOpen_Click" IsEnabled="False" />
+
+            <TextBlock Text="Or Create New Database:" Margin="0,20,0,10" />
+            <Grid Margin="0,0,0,10">
+                <TextBox x:Name="TxtDbName" Width="200" Margin="0,0,0,0" />
+                <TextBlock Text="Enter name db:"
+                           VerticalAlignment="Center" Margin="0,0,0,0"
+                           IsHitTestVisible="False" Opacity="1" />
+            </Grid>
+            <Grid Margin="0,0,0,10">
+                <TextBox x:Name="TxtFolderPath" Width="300" IsReadOnly="True" Margin="0,0,0,0" />
+                <TextBlock Text="Path:"
+                           VerticalAlignment="Center" Margin="0,0,0,0"
+                           IsHitTestVisible="False" Opacity="1" />
+            </Grid>
+            <Button x:Name="BtnSelectFolder" Content="Select Folder" Click="btnSelectFolder_Click" Margin="0,0,0,10" />
+            <Button x:Name="BtnCreate" Content="Create New Database" Click="btnCreate_Click" IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Window>

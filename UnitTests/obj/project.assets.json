@@ -381,6 +381,9 @@
       "DBMS/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/DBMS.dll": {}
         },

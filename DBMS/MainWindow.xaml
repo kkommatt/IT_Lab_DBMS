@@ -5,10 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DBMS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Database Management System" Width="370" Height="300">
     <Grid>
-        <Button Content="Click Me" Width="100" Height="30" 
-                HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Click="ButtonBase_OnClick"/>
+        <ListBox x:Name="ListBoxTables"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="200" Height="238" Margin="12,12,0,0"/>
+
+        <Button x:Name="BtnCreateTable" Content="Create table"
+                Width="120" Height="30" Margin="230,12,0,0"
+                Click="btnCreateTable_Click"/>
+
+        <Button x:Name="BtnViewTable" Content="See table"
+                Width="120" Height="30" Margin="230,60,0,0"
+                Click="btnViewTable_Click"/>
+
+        <Button x:Name="BtnDeleteTable" Content="Delete table"
+                Width="120" Height="30" Margin="230,110,0,0"
+                Click="btnDeleteTable_Click"/>
+
+        <Button x:Name="BtnSaveDatabase" Content="Save db"
+                Width="120" Height="30" Margin="230,160,0,0"
+                Click="btnSaveDatabase_Click"/>
+
+        <Button x:Name="BtnLoadDatabase" Content="Load db"
+                Width="120" Height="30" Margin="230,210,0,0"
+                Click="btnLoadDatabase_Click"/>
     </Grid>
 </Window>

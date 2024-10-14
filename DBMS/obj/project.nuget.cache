@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nFPyKAuuM7I=",
+  "dgSpecHash": "2DdKzpaYuGo=",
   "success": true,
   "projectFilePath": "C:\\Users\\mkovalyk\\RiderProjects\\DBMS\\DBMS\\DBMS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mkovalyk\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

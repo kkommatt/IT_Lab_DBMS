@@ -6,8 +6,8 @@ public enum DataType
     Real,
     Char,
     String,
-    Time,
-    TimeInterval
+    Date,
+    DateInterval
 }
 
 public class Field
