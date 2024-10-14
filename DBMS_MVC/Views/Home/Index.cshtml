@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Database Management</h2>
+
+<h3>Load Existing Database</h3>
+<form asp-action="LoadDatabase" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".json" required />
+    <button type="submit" class="btn btn-primary">Load Database</button>
+</form>
+
+<h3>Create New Database</h3>
+<form asp-action="CreateDatabase" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="fileName">Db Name:</label>
+        <input type="text" name="fileName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="file">Select a file to save in its directory:</label>
+        <input type="file" name="file" accept=".json" required />
+        <small class="form-text text-muted">Select a file in the folder where you want to save the new database.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Database</button>
+</form>

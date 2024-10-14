@@ -1,0 +1,40 @@
+﻿@model Table
+
+<h2>Rename Field</h2>
+
+<form asp-action="RenameField" method="post">
+    <input type="hidden" name="name" value="@Model.Name" />
+
+    <div class="form-group">
+        <label asp-for="Name">Table Name:</label>
+        <input type="text" value="@Model.Name" readonly class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="oldFieldName">Select Field to Rename:</label>
+        <select name="oldFieldName" class="form-control" required>
+            <option value="">-- Select a field --</option>
+            @foreach (var field in ViewBag.Fields)
+            {
+            <option value="@field.Value">@field.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="newFieldName">New Field Name:</label>
+        <input type="text" name="newFieldName" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Rename Field</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+<div class="alert alert-danger">
+    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+    {
+    <p>@error.ErrorMessage</p>
+    }
+</div>
+}

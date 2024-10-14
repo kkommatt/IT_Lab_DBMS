@@ -1,0 +1,13 @@
+﻿@model Table
+
+<h1 class="text-danger">Delete table @Model.Name?</h1>
+
+<div class="alert alert-warning" role="alert">
+    <p><strong>Are you sure?</strong></p>
+</div>
+
+@using (Html.BeginForm())
+{
+<button type="submit" class="btn btn-danger">Delete</button>
+<a class="btn btn-secondary" href="@Url.Action("Index", "Table")">Cancel</a>
+}

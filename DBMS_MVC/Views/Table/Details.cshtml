@@ -1,0 +1,64 @@
+﻿@model Table
+
+<h1>Table - @Model.Name</h1>
+
+<h3>Fields</h3>
+<table class="table table-bordered">
+    <thead class="thead-light">
+    <tr>
+        <th>Name</th>
+        <th>Datatype</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var field in Model.Fields)
+    {
+    <tr>
+        <td>@field.Name</td>
+        <td>@field.Type</td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<h3>Rows</h3>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        @foreach (var field in Model.Fields)
+        {
+        <th>@field.Name</th>
+        }
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var row in Model.Rows)
+    {
+    <tr>
+        @foreach (var field in Model.Fields)
+        {
+        <td>
+            @if (field.Type == DataType.Date)
+            {
+            @(((DateTime)row.Values[field.Name]).ToString("yyyy-MM-dd"))
+            }
+            else
+            {
+            @row.Values[field.Name]
+            }
+        </td>
+        }
+        <td>
+            <a class="btn btn-sm btn-warning" href="@Url.Action("EditRow", "Table", new { name = Model.Name, index = Model.Rows.IndexOf(row) })">Edit</a>
+            <a class="btn btn-sm btn-danger" href="@Url.Action("DeleteRow", "Table", new { name = Model.Name, index = Model.Rows.IndexOf(row) })">Delete</a>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<a class="btn btn-success" href="@Url.Action("AddRow", "Table", new { name = Model.Name })">Add row</a>
+<a class="btn btn-warning" href="@Url.Action("RenameField", "Table", new { name = Model.Name })">Rename Field</a>
+<a class="btn btn-secondary" href="@Url.Action("Index", "Table")">Return to table list</a>
+<a class="btn btn-danger" href="@Url.Action("Delete", "Table", new { name = Model.Name })">Delete Table</a>
