@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Table Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Database Table Manager</h1>
+    <div id="table-creation">
+        <h2>Create New Table</h2>
+        <input type="text" id="tableName" placeholder="Table Name"/>
+        <div id="fields-container">
+            <h3>Fields</h3>
+            <div class="field-row">
+                <input type="text" placeholder="Field Name" class="field-name"/>
+                <select class="field-type">
+                    <option value="Integer">Integer</option>
+                    <option value="Real">Real</option>
+                    <option value="Char">Char</option>
+                    <option value="String">String</option>
+                    <option value="Date">Date</option>
+                    <option value="DateInterval">Date Interval</option>
+                </select>
+                <button type="button" onclick="removeField(this)">Remove Field</button>
+            </div>
+        </div>
+        <button type="button" onclick="addField()">Add Field</button>
+        <button type="button" onclick="createTable()">Create Table</button>
+    </div>
+
+    <div id="tables-section">
+        <h2>Existing Tables</h2>
+        <select id="tables-dropdown" onchange="loadTable(this.value)">
+            <option>Select a table</option>
+        </select>
+        <div id="table-management">
+            <div id="table-view"></div>
+            <div id="row-creation">
+                <h3 id="add-row-label">Add Row</h3>
+                <div id="row-fields"></div>
+                <button type="button" onclick="addRow()">Add Row</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="rename-field-section">
+        <h2>Rename Field</h2>
+        <input type="text" id="renameOldField" placeholder="Old Field Name">
+        <input type="text" id="renameNewField" placeholder="New Field Name">
+        <button type="button" onclick="renameField()">Rename Field</button>
+    </div>
+
+    <div>
+        <button type="button" onclick="deleteTable()">Delete Selected Table</button>
+    </div>
+</div>
+<script src="src/main.js"></script>
+</body>
+</html>

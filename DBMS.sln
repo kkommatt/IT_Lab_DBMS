@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMS_MVC", "DBMS_MVC\DBMS_MVC.csproj", "{0AE03940-95C8-4E65-B148-14E591585283}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMS_WEBAPI", "DBMS_WEBAPI\DBMS_WEBAPI.csproj", "{9673AA3F-5240-49F0-9B8D-3994CE2102B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0AE03940-95C8-4E65-B148-14E591585283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE03940-95C8-4E65-B148-14E591585283}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE03940-95C8-4E65-B148-14E591585283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9673AA3F-5240-49F0-9B8D-3994CE2102B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9673AA3F-5240-49F0-9B8D-3994CE2102B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9673AA3F-5240-49F0-9B8D-3994CE2102B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9673AA3F-5240-49F0-9B8D-3994CE2102B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

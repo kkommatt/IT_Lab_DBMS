@@ -1,0 +1,104 @@
+{
+  "Tables": [
+    {
+      "Name": "Users",
+      "Fields": [
+        {
+          "Name": "name",
+          "Type": 3
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "name": "Matt"
+          }
+        },
+        {
+          "Values": {
+            "name": "matthw"
+          }
+        },
+        {
+          "Values": {
+            "name": "Only one"
+          }
+        },
+        {
+          "Values": {
+            "name": "One"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NewTable",
+      "Fields": [
+        {
+          "Name": "dt_interval_col",
+          "Type": 5
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "dt_interval_col": "2024-10-17 - 2024-11-20"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MyTable",
+      "Fields": [
+        {
+          "Name": "ID",
+          "Type": 0
+        },
+        {
+          "Name": "new_id",
+          "Type": 0
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "ID": "1",
+            "new_id": "1"
+          }
+        },
+        {
+          "Values": {
+            "ID": "3",
+            "new_id": "1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Students",
+      "Fields": [
+        {
+          "Name": "aghjfh",
+          "Type": 3
+        },
+        {
+          "Name": "bvjvh",
+          "Type": 0
+        },
+        {
+          "Name": "id",
+          "Type": 0
+        }
+      ],
+      "Rows": [
+        {
+          "Values": {
+            "aghjfh": "hgfhgf",
+            "bvjvh": "8",
+            "id": "20"
+          }
+        }
+      ]
+    }
+  ]
+}
