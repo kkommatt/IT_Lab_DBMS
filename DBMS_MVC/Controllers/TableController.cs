@@ -137,6 +137,22 @@ public class TableController : Controller
         {
             try
             {
+                var table = _dbProcessor.GetTableByName(name);
+                if (table == null)
+                {
+                    return NotFound("Table not found");
+                }
+
+                if (table.Fields.Any(f => f.Name.Equals(newFieldName, StringComparison.OrdinalIgnoreCase)))
+                {
+                    ModelState.AddModelError("", $"The field name '{newFieldName}' already exists.");
+                    ViewBag.Fields = table.Fields.Select(f => new SelectListItem
+                    {
+                        Text = f.Name,
+                        Value = f.Name
+                    }).ToList();
+                    return View(table);
+                }
                 _dbProcessor.RenameField(name, oldFieldName, newFieldName);
                 return RedirectToAction("Details", new { name = name });
             }
