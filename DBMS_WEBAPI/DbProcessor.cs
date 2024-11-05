@@ -119,8 +119,17 @@ public class DbProcessor
                     var dates = value.ToString().Split('-');
                     if (dates.Length != 2)
                         return false;
-                    DateTime.Parse(dates[0].Trim());
-                    DateTime.Parse(dates[1].Trim());
+                    
+                    DateTime startDate, endDate;
+                    bool isStartDateValid = DateTime.TryParse(dates[0].Trim(), out startDate);
+                    bool isEndDateValid = DateTime.TryParse(dates[1].Trim(), out endDate);
+
+                    if (!isStartDateValid || !isEndDateValid)
+                        return false;
+
+                    if (startDate >= endDate)
+                        return false;
+
                     return true;
                 default:
                     return false;
